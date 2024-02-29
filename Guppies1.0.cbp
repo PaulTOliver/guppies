@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Guppies1.0" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="Simulation\Params\;Simulation\;Simulation\Camera\;Simulation\ContactListener\;Simulation\Corpse\;Simulation\Entity\;Simulation\SimBase\;Simulation\Guppie\;Simulation\Pellet\;Simulation\SimFitness\;Simulation\Tank\;Simulation\TextDisplay\;Simulation\Zapper\;App\;" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/Guppies" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-DSFML_STATIC" />
+					<Add directory="C:/wxWidgets-2.9.4/lib/gcc_lib/mswu" />
+					<Add directory="../../Libraries/SFML-2.0/include" />
+					<Add directory="../../Libraries/Box2D/include" />
+					<Add directory="../../Libraries/NeuralNetworks" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="C:/wxWidgets-2.9.4/lib/gcc_lib/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libwxmsw29u.a" />
+					<Add library="libwxpng.a" />
+					<Add library="libwxjpeg.a" />
+					<Add library="libwxtiff.a" />
+					<Add library="libwxzlib.a" />
+					<Add library="..\..\Libraries\NeuralNetworks\libNeuralNetworks.a" />
+					<Add library="..\..\Libraries\SFML-2.0\lib\libsfml-graphics-s.a" />
+					<Add library="..\..\Libraries\SFML-2.0\lib\libsfml-window-s.a" />
+					<Add library="..\..\Libraries\SFML-2.0\lib\libsfml-system-s.a" />
+					<Add library="..\..\Libraries\Box2D\lib\win\libBox2D.a" />
+					<Add directory="C:/wxWidgets-2.9.4/lib/gcc_lib" />
+					<Add directory="../../Libraries/Box2D/lib/win" />
+					<Add directory="../../Libraries/NeuralNetworks" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-pipe" />
+			<Add option="-mthreads" />
+			<Add option='[[if (PLATFORM == PLATFORM_MSW &amp;&amp; (GetCompilerFactory().GetCompilerVersionString(_T(&quot;gcc&quot;)) &gt;= _T(&quot;4.0.0&quot;))) print(_T(&quot;-Wno-attributes&quot;));]]' />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__WXMSW__" />
+			<Add option="-DwxUSE_UNICODE" />
+			<Add directory="C:/wxWidgets-2.9.4/include" />
+			<Add directory="C:/wxWidgets-2.9.4/contrib/include" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="C:/wxWidgets-2.9.4/include" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-mthreads" />
+			<Add library="libkernel32.a" />
+			<Add library="libuser32.a" />
+			<Add library="libgdi32.a" />
+			<Add library="libwinspool.a" />
+			<Add library="libcomdlg32.a" />
+			<Add library="libadvapi32.a" />
+			<Add library="libshell32.a" />
+			<Add library="libole32.a" />
+			<Add library="liboleaut32.a" />
+			<Add library="libuuid.a" />
+			<Add library="libcomctl32.a" />
+			<Add library="libwsock32.a" />
+			<Add library="libodbc32.a" />
+		</Linker>
+		<Unit filename="Guppies1_0App.cpp">
+			<Option virtualFolder="App/" />
+		</Unit>
+		<Unit filename="Guppies1_0App.h">
+			<Option virtualFolder="App/" />
+		</Unit>
+		<Unit filename="Guppies1_0Main.cpp">
+			<Option virtualFolder="App/" />
+		</Unit>
+		<Unit filename="Guppies1_0Main.h">
+			<Option virtualFolder="App/" />
+		</Unit>
+		<Unit filename="Simulation/Camera.cpp">
+			<Option virtualFolder="Simulation/Camera/" />
+		</Unit>
+		<Unit filename="Simulation/Camera.hpp">
+			<Option virtualFolder="Simulation/Camera/" />
+		</Unit>
+		<Unit filename="Simulation/ContactListener.cpp">
+			<Option virtualFolder="Simulation/ContactListener/" />
+		</Unit>
+		<Unit filename="Simulation/ContactListener.hpp">
+			<Option virtualFolder="Simulation/ContactListener/" />
+		</Unit>
+		<Unit filename="Simulation/Corpse.cpp">
+			<Option virtualFolder="Simulation/Corpse/" />
+		</Unit>
+		<Unit filename="Simulation/Corpse.hpp">
+			<Option virtualFolder="Simulation/Corpse/" />
+		</Unit>
+		<Unit filename="Simulation/Entity.cpp">
+			<Option virtualFolder="Simulation/Entity/" />
+		</Unit>
+		<Unit filename="Simulation/Entity.hpp">
+			<Option virtualFolder="Simulation/Entity/" />
+		</Unit>
+		<Unit filename="Simulation/GraphicObjs.hpp">
+			<Option virtualFolder="Simulation/SimBase/" />
+		</Unit>
+		<Unit filename="Simulation/Guppie.cpp">
+			<Option virtualFolder="Simulation/Guppie/" />
+		</Unit>
+		<Unit filename="Simulation/Guppie.hpp">
+			<Option virtualFolder="Simulation/Guppie/" />
+		</Unit>
+		<Unit filename="Simulation/GuppiesInclude.hpp">
+			<Option virtualFolder="Simulation/" />
+		</Unit>
+		<Unit filename="Simulation/Params.hpp">
+			<Option virtualFolder="Simulation/Params/" />
+		</Unit>
+		<Unit filename="Simulation/Pellet.cpp">
+			<Option virtualFolder="Simulation/Pellet/" />
+		</Unit>
+		<Unit filename="Simulation/Pellet.hpp">
+			<Option virtualFolder="Simulation/Pellet/" />
+		</Unit>
+		<Unit filename="Simulation/SimBase.hpp">
+			<Option virtualFolder="Simulation/SimBase/" />
+		</Unit>
+		<Unit filename="Simulation/SimBase_CreateNew.cpp">
+			<Option virtualFolder="Simulation/SimBase/" />
+		</Unit>
+		<Unit filename="Simulation/SimBase_Draw.cpp">
+			<Option virtualFolder="Simulation/SimBase/" />
+		</Unit>
+		<Unit filename="Simulation/SimBase_Execute.cpp">
+			<Option virtualFolder="Simulation/SimBase/" />
+		</Unit>
+		<Unit filename="Simulation/SimBase_PrepareGraphics.cpp">
+			<Option virtualFolder="Simulation/SimBase/" />
+		</Unit>
+		<Unit filename="Simulation/SimBase_Update.cpp">
+			<Option virtualFolder="Simulation/SimBase/" />
+		</Unit>
+		<Unit filename="Simulation/SimFitness.hpp">
+			<Option virtualFolder="Simulation/SimFitness/" />
+		</Unit>
+		<Unit filename="Simulation/SimFitness_StartSpecs.cpp">
+			<Option virtualFolder="Simulation/SimFitness/" />
+		</Unit>
+		<Unit filename="Simulation/SimFitness_UpdateSpecs.cpp">
+			<Option virtualFolder="Simulation/SimFitness/" />
+		</Unit>
+		<Unit filename="Simulation/Tank.cpp">
+			<Option virtualFolder="Simulation/Tank/" />
+		</Unit>
+		<Unit filename="Simulation/Tank.hpp">
+			<Option virtualFolder="Simulation/Tank/" />
+		</Unit>
+		<Unit filename="Simulation/TextDisplay.cpp">
+			<Option virtualFolder="Simulation/TextDisplay/" />
+		</Unit>
+		<Unit filename="Simulation/TextDisplay.hpp">
+			<Option virtualFolder="Simulation/TextDisplay/" />
+		</Unit>
+		<Unit filename="Simulation/Zapper.cpp">
+			<Option virtualFolder="Simulation/Zapper/" />
+		</Unit>
+		<Unit filename="Simulation/Zapper.hpp">
+			<Option virtualFolder="Simulation/Zapper/" />
+		</Unit>
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+			<Option virtualFolder="App/" />
+		</Unit>
+		<Unit filename="wxsmith/Guppies1_0dialog.wxs">
+			<Option virtualFolder="App/" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="Guppies1_0App.cpp" main="Guppies1_0Dialog" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxDialog wxs="wxsmith/Guppies1_0dialog.wxs" src="Guppies1_0Main.cpp" hdr="Guppies1_0Main.h" fwddecl="0" i18n="1" name="Guppies1_0Dialog" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="Guppies1_0Dialog">
+		<title>Neural Guppies - 0.1 beta</title>
+		<centered>1</centered>
+		<id_arg>0</id_arg>
+		<style>wxDEFAULT_DIALOG_STYLE|wxMINIMIZE_BOX</style>
+		<handler function="OnInit" entry="EVT_INIT_DIALOG" />
+		<object class="wxBoxSizer" variable="BoxSizer1" member="yes">
+			<object class="sizeritem">
+				<object class="wxPanel" name="ID_PANEL1" variable="Panel1" member="yes">
+					<object class="wxBoxSizer" variable="BoxSizer2" member="no">
+						<orient>wxVERTICAL</orient>
+						<object class="sizeritem">
+							<object class="wxNotebook" name="ID_NOTEBOOK1" variable="Notebook1" member="yes">
+								<handler function="OnNotebook1PageChanged" entry="EVT_NOTEBOOK_PAGE_CHANGED" />
+								<object class="notebookpage">
+									<object class="wxPanel" name="ID_PANEL4" variable="Panel4" member="yes">
+										<bg>wxSYS_COLOUR_BTNHIGHLIGHT</bg>
+										<object class="wxBoxSizer" variable="BoxSizer27" member="no">
+											<orient>wxVERTICAL</orient>
+											<object class="sizeritem">
+												<object class="wxStaticBitmap" name="ID_STATICBITMAP1" variable="StaticBitmap1" member="yes">
+													<bitmap>gfx\logo.png</bitmap>
+													<style>0</style>
+												</object>
+												<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+											</object>
+											<object class="sizeritem">
+												<object class="wxStaticLine" name="ID_STATICLINE3" variable="StaticLine3" member="yes">
+													<size>10,-1</size>
+												</object>
+												<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+											</object>
+											<object class="sizeritem">
+												<object class="wxStaticText" name="ID_STATICTEXT37" variable="StaticText37" member="yes">
+													<label>&#x0A;Version -0.1 beta 20121220&#x0A;&#x0A;By: Paul T. Oliver</label>
+													<font>
+														<size>11</size>
+														<style>normal</style>
+														<weight>normal</weight>
+														<underlined>0</underlined>
+														<family>swiss</family>
+														<face>DejaVu Sans Mono</face>
+													</font>
+													<style>wxALIGN_CENTRE</style>
+												</object>
+												<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											</object>
+											<object class="sizeritem">
+												<object class="wxStaticText" name="ID_STATICTEXT39" variable="StaticText39" member="yes">
+													<label>paul.t.oliver.design@gmail.com</label>
+												</object>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											</object>
+											<object class="sizeritem">
+												<object class="wxHyperlinkCtrl" name="ID_HYPERLINKCTRL1" variable="HyperlinkCtrl1" member="yes" />
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>4</border>
+											</object>
+											<object class="sizeritem">
+												<object class="wxBoxSizer" variable="BoxSizer28" member="no">
+													<object class="sizeritem">
+														<object class="wxButton" name="ID_BUTTON4" variable="Button4" member="yes">
+															<label>Load simulation</label>
+															<font>
+																<size>11</size>
+																<style>normal</style>
+																<weight>normal</weight>
+																<underlined>0</underlined>
+																<family>swiss</family>
+																<face>DejaVu Sans Mono</face>
+															</font>
+															<handler function="OnButton4Click" entry="EVT_BUTTON" />
+														</object>
+														<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+														<border>5</border>
+														<option>1</option>
+													</object>
+													<object class="sizeritem">
+														<object class="wxButton" name="ID_BUTTON3" variable="Button3" member="yes">
+															<label>New simulation</label>
+															<font>
+																<size>11</size>
+																<style>normal</style>
+																<weight>normal</weight>
+																<underlined>0</underlined>
+																<family>swiss</family>
+																<face>DejaVu Sans Mono</face>
+															</font>
+															<handler function="OnButton3Click" entry="EVT_BUTTON" />
+														</object>
+														<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+														<border>5</border>
+														<option>1</option>
+													</object>
+												</object>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxStaticText" name="ID_STATICTEXT38" variable="StaticText38" member="yes">
+													<label></label>
+													<style>wxALIGN_CENTRE</style>
+												</object>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+											</object>
+										</object>
+									</object>
+									<label>Welcome</label>
+								</object>
+								<object class="notebookpage">
+									<object class="wxPanel" name="ID_PANEL2" variable="Panel2" member="yes">
+										<pos>29,47</pos>
+										<bg>wxSYS_COLOUR_BTNHIGHLIGHT</bg>
+										<object class="wxBoxSizer" variable="BoxSizer3" member="no">
+											<orient>wxVERTICAL</orient>
+											<object class="sizeritem">
+												<object class="wxBoxSizer" variable="BoxSizer4" member="no">
+													<object class="sizeritem">
+														<object class="wxFilePickerCtrl" name="ID_FILEPICKERCTRL1" variable="FilePickerCtrl1" member="yes">
+															<message>Load simulation</message>
+															<wildcard>*.sim</wildcard>
+															<enabled>0</enabled>
+														</object>
+														<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+														<border>5</border>
+														<option>3</option>
+													</object>
+												</object>
+												<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+											</object>
+											<object class="sizeritem">
+												<object class="wxStaticLine" name="ID_STATICLINE1" variable="StaticLine1" member="yes">
+													<size>10,-1</size>
+												</object>
+												<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+											</object>
+											<object class="sizeritem">
+												<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+													<label>No simulation loaded.</label>
+												</object>
+												<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>10</border>
+												<option>3</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxStaticLine" name="ID_STATICLINE2" variable="StaticLine2" member="yes">
+													<size>10,-1</size>
+												</object>
+												<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+											</object>
+											<object class="sizeritem">
+												<object class="wxBoxSizer" variable="BoxSizer5" member="no">
+													<object class="sizeritem">
+														<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
+															<label>Resume simulation</label>
+															<enabled>0</enabled>
+														</object>
+														<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+														<border>5</border>
+														<option>1</option>
+													</object>
+												</object>
+												<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+											</object>
+										</object>
+									</object>
+									<label>Load simulation</label>
+								</object>
+								<object class="notebookpage">
+									<object class="wxPanel" name="ID_PANEL3" variable="Panel3" member="yes">
+										<pos>96,8</pos>
+										<bg>wxSYS_COLOUR_BTNHIGHLIGHT</bg>
+										<object class="wxBoxSizer" variable="BoxSizer6" member="no">
+											<object class="sizeritem">
+												<object class="wxBoxSizer" variable="BoxSizer20" member="no">
+													<orient>wxVERTICAL</orient>
+													<object class="sizeritem">
+														<object class="wxStaticBoxSizer" variable="StaticBoxSizer8" member="no">
+															<label>Neural network parameters</label>
+															<object class="sizeritem">
+																<object class="wxBoxSizer" variable="BoxSizer21" member="no">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT31" variable="StaticText31" member="yes">
+																			<label>Network structure</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT32" variable="StaticText32" member="yes">
+																			<label>Node structure</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT33" variable="StaticText33" member="yes">
+																			<label>Nodes per hidden layer</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																</object>
+																<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+															<object class="sizeritem">
+																<object class="wxBoxSizer" variable="BoxSizer22" member="no">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<object class="wxChoice" name="ID_CHOICE1" variable="Choice1" member="yes">
+																			<content>
+																				<item>Single MLP</item>
+																				<item>Dual MLP</item>
+																				<item>Simple RN</item>
+																				<item>Fully RN</item>
+																			</content>
+																			<selection>0</selection>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxChoice" name="ID_CHOICE2" variable="Choice2" member="yes">
+																			<content>
+																				<item>Neuron</item>
+																				<item>Memory cell</item>
+																			</content>
+																			<selection>0</selection>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL18" variable="TextCtrl18" member="yes">
+																			<value>80</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<option>1</option>
+																	</object>
+																</object>
+																<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+														</object>
+														<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+														<border>5</border>
+													</object>
+													<object class="sizeritem">
+														<object class="wxStaticBoxSizer" variable="StaticBoxSizer10" member="no">
+															<label>Population parameters</label>
+															<object class="sizeritem">
+																<object class="wxBoxSizer" variable="BoxSizer25" member="no">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT35" variable="StaticText35" member="yes">
+																			<label>Sub-population size</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT34" variable="StaticText34" member="yes">
+																			<label>Sub-population quantity</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT36" variable="StaticText36" member="yes">
+																			<label>Elites per generation</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																</object>
+																<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+															<object class="sizeritem">
+																<object class="wxBoxSizer" variable="BoxSizer26" member="no">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL22" variable="TextCtrl22" member="yes">
+																			<value>20</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL23" variable="TextCtrl23" member="yes">
+																			<value>20</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL24" variable="TextCtrl24" member="yes">
+																			<value>40</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																</object>
+																<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+														</object>
+														<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+														<border>5</border>
+													</object>
+													<object class="sizeritem">
+														<object class="wxStaticBoxSizer" variable="StaticBoxSizer9" member="no">
+															<label>Fitness bonuses</label>
+															<object class="sizeritem">
+																<object class="wxBoxSizer" variable="BoxSizer23" member="no">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT28" variable="StaticText28" member="yes">
+																			<label>Per pellet</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT30" variable="StaticText30" member="yes">
+																			<label>Per guppy</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT29" variable="StaticText29" member="yes">
+																			<label>Per corpse (max)</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																</object>
+																<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+															<object class="sizeritem">
+																<object class="wxBoxSizer" variable="BoxSizer24" member="no">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL19" variable="TextCtrl19" member="yes">
+																			<value>9000</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL20" variable="TextCtrl20" member="yes">
+																			<value>36000</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL21" variable="TextCtrl21" member="yes">
+																			<value>36000</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																</object>
+																<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+														</object>
+														<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+														<border>5</border>
+													</object>
+												</object>
+												<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxBoxSizer" variable="BoxSizer7" member="no">
+													<orient>wxVERTICAL</orient>
+													<object class="sizeritem">
+														<object class="wxStaticBoxSizer" variable="StaticBoxSizer1" member="no">
+															<label>Dish parameters</label>
+															<object class="sizeritem">
+																<object class="wxBoxSizer" variable="BoxSizer15" member="no">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+																			<label>Dish radius</label>
+																			<help>Size of the circular dish that guppies live in</help>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																</object>
+																<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+															<object class="sizeritem">
+																<object class="wxBoxSizer" variable="BoxSizer16" member="no">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="TextCtrl1" member="yes">
+																			<value>40</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																</object>
+																<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+														</object>
+														<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+														<border>5</border>
+													</object>
+													<object class="sizeritem">
+														<object class="wxStaticBoxSizer" variable="StaticBoxSizer2" member="no">
+															<label>Entity parameters</label>
+															<object class="sizeritem">
+																<object class="wxBoxSizer" variable="BoxSizer8" member="no">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+																			<label>Zapper random force</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText4" member="yes">
+																			<label>Zapper random torque</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText5" member="yes">
+																			<label>Zapper quantity</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT6" variable="StaticText6" member="yes">
+																			<label>Pellet quantity</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT7" variable="StaticText7" member="yes">
+																			<label>Pellet creation delay</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT8" variable="StaticText8" member="yes">
+																			<label>Start scarce</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT9" variable="StaticText9" member="yes">
+																			<label>Corpse decay</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT10" variable="StaticText10" member="yes">
+																			<label>Corpse decay rate</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																</object>
+																<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+															<object class="sizeritem">
+																<object class="wxBoxSizer" variable="BoxSizer9" member="no">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="TextCtrl2" member="yes">
+																			<value>50</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL3" variable="TextCtrl3" member="yes">
+																			<value>150</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL4" variable="TextCtrl4" member="yes">
+																			<value>20</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL5" variable="TextCtrl5" member="yes">
+																			<value>400</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL6" variable="TextCtrl6" member="yes">
+																			<value>150</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxCheckBox" name="ID_CHECKBOX1" variable="CheckBox1" member="yes" />
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxCheckBox" name="ID_CHECKBOX2" variable="CheckBox2" member="yes">
+																			<checked>1</checked>
+																			<handler function="OnCheckBox2Click" entry="EVT_CHECKBOX" />
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL8" variable="TextCtrl8" member="yes">
+																			<value>3600</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																</object>
+																<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+														</object>
+														<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+														<border>5</border>
+													</object>
+													<object class="sizeritem">
+														<object class="wxStaticBoxSizer" variable="StaticBoxSizer5" member="no">
+															<label>Colors</label>
+															<object class="sizeritem">
+																<object class="wxBoxSizer" variable="BoxSizer17" member="no">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT22" variable="StaticText22" member="yes">
+																			<label>Background</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT23" variable="StaticText23" member="yes">
+																			<label>Dish fill (fog)</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT24" variable="StaticText24" member="yes">
+																			<label>Zappers</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT25" variable="StaticText25" member="yes">
+																			<label>Pellets</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT26" variable="StaticText26" member="yes">
+																			<label>Corpses</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT27" variable="StaticText27" member="yes">
+																			<label>Guppies</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																</object>
+																<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+															<object class="sizeritem">
+																<object class="wxBoxSizer" variable="BoxSizer18" member="no">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<object class="wxColourPickerCtrl" name="ID_COLOURPICKERCTRL1" variable="ColourPickerCtrl1" member="yes">
+																			<colour>#0F0F0F</colour>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxColourPickerCtrl" name="ID_COLOURPICKERCTRL2" variable="ColourPickerCtrl2" member="yes">
+																			<colour>#000000</colour>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxColourPickerCtrl" name="ID_COLOURPICKERCTRL3" variable="ColourPickerCtrl3" member="yes">
+																			<colour>#0000FF</colour>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxColourPickerCtrl" name="ID_COLOURPICKERCTRL4" variable="ColourPickerCtrl4" member="yes">
+																			<colour>#00FF00</colour>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxColourPickerCtrl" name="ID_COLOURPICKERCTRL5" variable="ColourPickerCtrl5" member="yes">
+																			<colour>#FF0000</colour>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxColourPickerCtrl" name="ID_COLOURPICKERCTRL6" variable="ColourPickerCtrl6" member="yes">
+																			<colour>#FF0000</colour>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																</object>
+																<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+														</object>
+														<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+														<border>5</border>
+														<option>1</option>
+													</object>
+												</object>
+												<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxBoxSizer" variable="BoxSizer10" member="no">
+													<orient>wxVERTICAL</orient>
+													<object class="sizeritem">
+														<object class="wxStaticBoxSizer" variable="StaticBoxSizer3" member="no">
+															<label>Guppy parameters</label>
+															<object class="sizeritem">
+																<object class="wxBoxSizer" variable="BoxSizer11" member="no">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT11" variable="StaticText11" member="yes">
+																			<label>Activation delay</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT12" variable="StaticText12" member="yes">
+																			<label>Thrust force</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT13" variable="StaticText13" member="yes">
+																			<label>Thrust radius</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT14" variable="StaticText14" member="yes">
+																			<label>Initial energy</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT15" variable="StaticText15" member="yes">
+																			<label>Max energy</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT16" variable="StaticText16" member="yes">
+																			<label>Aging rate</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT17" variable="StaticText17" member="yes">
+																			<label>Leave corpse</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																</object>
+																<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+															<object class="sizeritem">
+																<object class="wxBoxSizer" variable="BoxSizer12" member="no">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL7" variable="TextCtrl7" member="yes">
+																			<value>120</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL9" variable="TextCtrl9" member="yes">
+																			<value>5</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL10" variable="TextCtrl10" member="yes">
+																			<value>0.05</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL11" variable="TextCtrl11" member="yes">
+																			<value>60</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL12" variable="TextCtrl12" member="yes">
+																			<value>180</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL13" variable="TextCtrl13" member="yes">
+																			<value>600</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxCheckBox" name="ID_CHECKBOX3" variable="CheckBox3" member="yes">
+																			<checked>1</checked>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																</object>
+																<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+														</object>
+														<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+														<border>5</border>
+													</object>
+													<object class="sizeritem">
+														<object class="wxStaticBoxSizer" variable="StaticBoxSizer4" member="no">
+															<label>Energy transfers</label>
+															<object class="sizeritem">
+																<object class="wxBoxSizer" variable="BoxSizer13" member="no">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT18" variable="StaticText18" member="yes">
+																			<label>From zappers</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT19" variable="StaticText19" member="yes">
+																			<label>From pellets</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT20" variable="StaticText20" member="yes">
+																			<label>From other guppies</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT21" variable="StaticText21" member="yes">
+																			<label>From corpses (max)</label>
+																		</object>
+																		<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																</object>
+																<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+															<object class="sizeritem">
+																<object class="wxBoxSizer" variable="BoxSizer14" member="no">
+																	<orient>wxVERTICAL</orient>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL14" variable="TextCtrl14" member="yes">
+																			<value>-20</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL15" variable="TextCtrl15" member="yes">
+																			<value>15</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL16" variable="TextCtrl16" member="yes">
+																			<value>60</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL17" variable="TextCtrl17" member="yes">
+																			<value>60</value>
+																		</object>
+																		<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<border>5</border>
+																		<option>1</option>
+																	</object>
+																</object>
+																<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+														</object>
+														<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+														<border>5</border>
+													</object>
+													<object class="sizeritem">
+														<object class="wxStaticBoxSizer" variable="StaticBoxSizer6" member="no">
+															<label>Load parameters</label>
+															<object class="sizeritem">
+																<object class="wxFilePickerCtrl" name="ID_FILEPICKERCTRL2" variable="FilePickerCtrl2" member="yes">
+																	<message>Load parameters</message>
+																	<path>prms/</path>
+																	<wildcard>*.prms</wildcard>
+																	<handler function="OnFilePickerCtrl2FileChanged" entry="EVT_FILEPICKER_CHANGED" />
+																</object>
+																<flag>wxLEFT|wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+														</object>
+														<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+														<border>5</border>
+													</object>
+													<object class="sizeritem">
+														<object class="wxStaticBoxSizer" variable="StaticBoxSizer7" member="no">
+															<label>Save parameters</label>
+															<object class="sizeritem">
+																<object class="wxFilePickerCtrl" name="ID_FILEPICKERCTRL3" variable="FilePickerCtrl3" member="yes">
+																	<message>Save parameters</message>
+																	<path>prms/</path>
+																	<wildcard>*.prms</wildcard>
+																	<extra_code>wxFLP__SMALL</extra_code>
+																	<style>wxFLP_OVERWRITE_PROMPT|wxFLP_SAVE</style>
+																	<handler function="OnFilePickerCtrl3FileChanged" entry="EVT_FILEPICKER_CHANGED" />
+																</object>
+																<flag>wxLEFT|wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+															<object class="sizeritem">
+																<object class="wxButton" name="ID_BUTTON5" variable="Button5" member="yes">
+																	<label>Save as default</label>
+																</object>
+																<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+														</object>
+														<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+														<border>5</border>
+													</object>
+													<object class="sizeritem">
+														<object class="wxBoxSizer" variable="BoxSizer19" member="no">
+															<object class="sizeritem">
+																<object class="wxButton" name="ID_BUTTON2" variable="Button2" member="yes">
+																	<label>Begin new simulation</label>
+																	<handler function="OnBeginNewSimulation" entry="EVT_BUTTON" />
+																</object>
+																<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<border>5</border>
+																<option>1</option>
+															</object>
+														</object>
+														<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+														<border>10</border>
+														<option>1</option>
+													</object>
+												</object>
+												<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+										</object>
+									</object>
+									<label>New simulation</label>
+								</object>
+							</object>
+							<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+							<border>5</border>
+							<option>1</option>
+						</object>
+					</object>
+				</object>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<option>1</option>
+			</object>
+		</object>
+	</object>
+</wxsmith>

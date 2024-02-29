@@ -1,0 +1,255 @@
+================================================================================
+NEURAL GUPPIES -v0.1 beta
+Author: Paul T. Oliver (paul.t.oliver.design@gmail.com)
+================================================================================
+
+================================================================================
+Index:
+
+I.   Disclaimer
+II.  Usage instructions
+III. Parameters
+IV.  Controls
+
+================================================================================
+
+================================================================================
+I. DISCLAIMER:
+
+Neural Guppies is a NeuroEvolution experiment that evolves virtual creatures
+into intelligent beings. It is a personal project aimed to test several
+concepts that interest me, so I thought I should share it with the
+community. However, it has no guaranty and has not been tested in any other
+system but mine. Thus, if you run this on your system, you must do it at your
+own risk. To see a brief introduction on Neural Guppies, visit the following
+links:
+
+http://www.youtube.com/watch?v=tCPzYM7B338
+http://www.youtube.com/watch?v=N-HjfS4P6r4
+http://www.youtube.com/watch?v=X7qUH8mSyUE
+http://forum.codecall.net/topic/72637-goopies-evolving-neural-networks-wip/
+
+Program is far from finished and can only begin Simulations from scratch
+(loading and saving simulations will be implemented soon). If you close the
+window the simulation will be lost. I've been able to successfully resume
+simulations after putting the computer to Sleep or Hibernate, (without
+closing the simulation window) but this may not work on all systems.
+
+Main concepts tested on this program are:
+    - Artificial Neural Networks
+    - Genetic Algorithms
+    - Neuro-evolution
+
+================================================================================
+
+================================================================================
+II. USAGE INSTRUCTIONS:
+
+1)  Extract NeuralGuppies-v0.1beta.zip to your preferred directory.
+
+2)  To begin a new simulation simply run Guppies.exe.
+
+3)  Click on NEW SIMULATION.
+
+4)  Set simulation parameters (see below to see what each parameter means).
+
+5)  Click on Begin new simulation.
+
+================================================================================
+
+================================================================================
+III. PARAMETERS:
+
+The program comes with default parameters built in. You should use those as a
+starting point and experiment by tweaking them as much as you like. No control
+is set to the inputed parameters, so you must take care that they make sense to
+the program (for example, you should not make a world so small that objects
+don't fit on it!).
+
+What follows is a list of all the tweak-able parameters and what they mean.
+After the name of each numerical parameter is the type of number that it
+expects (positive integer, integer, positive floating point or floating point).
+My recommendation is to change them in small gaps you you can see how each of
+them affects the simulation.
+
+1)  NETWORK STRUCTURE:
+    Defines the main topology of the Neural Network (i.e. the way that Nodes
+    connect with each other). The four possible choices (in order of
+    complexity) are:
+
+        a)  Single MultiLayer Perceptron:
+            A FeedForward network with 1 hidden layer. Information flows
+            unidirectionally from input nodes to output nodes (and not the
+            other way around).
+
+        b)  Dual MultiLayer Perceptron:
+            Same as above, but with two hidden layers instead of one.
+
+        c)  Simple Recurrent Network (Elman Network):
+            This type of recurrent network has a set of "context" units that
+            store the output of the (single) hidden layer and feeds it back
+            to the input layer on the next time-step, giving it a kind of
+            "temporal" perception.
+
+        d)  Fully Recurrent Network:
+            All Nodes in this network are connected to each other. It's the
+            most complex (and processor intensive) network of the four.
+
+2)  NODE STRUCTURE:
+    Defines the structure of each network node. The two choices are:
+
+        a)  Neuron:
+            Each neuron computes its outputs from a given set of inputs. Output
+            equals the weighted sum of all inputs.
+
+        b)  Memory Cell:
+            This kind of node is based in the Long-Short Term Memory recurrent
+            network model. It contains 4 neurons, 3 of them act as "gates" that
+            allow it to block input, store it and output it, thus being able to
+            hold in information or "memories" for a long time span. It's the
+            most complex (and processor intensive) type of node.
+
+3)  NODES PER HIDDEN LAYER (expects a positive integer):
+    Number of nodes that reside on each hidden layer. SingleMLPs, SimpleRNs and
+    FullyRNs have one hidden layer. DualMLPs have two (thus, their number of
+    hidden nodes is "this value" x 2). The more nodes, the more complex the
+    Neural Networks of the Guppies are (and the more time it'll take to evolve
+    them) but the more "intelligent" they can become (theoretically).
+
+4)  SUB POPULATION SIZE (expects a positive integer):
+    Populations of Guppies are divided into sub-populations of individuals that
+    are placed on the Dish simultaneously. If you experience a slow frame rate,
+    you can make this sub-populations smaller in order to reduce processor
+    overhead. However, the bigger the sub-populations, the more chance the
+    Guppies have to interact with each other.
+
+5)  SUB POPULATION QUANTITY (expects a positive integer):
+    Number of sub-populations (or population divisions). Thus, total population
+    of Guppies equals "sub-population qtty" x "this number". Larger populations
+    give the genetic algorithm more information (genes) to mix, thus they will
+    likely result in more "intelligent" Guppies. However, the larger the
+    population, the more cycles (time) the GA will need in order to evolve
+    intelligence.
+
+6)  FITNESS BONUSES (expects a positive floating point value):
+    Bonus fitness points each Guppy receives for eating a food pellet (remember
+    that the more fitness points a Guppy makes during its life, the more
+    chance it has to reproduce).
+
+7)  FITNESS BONUS PER GUPPY (expects a positive floating point value):
+    Bonus fitness points each Guppy receives for attacking another Guppy.
+
+8)  FITNESS BONUS PER CORPSE max (expects a positive floating point value):
+    Bonus fitness points each Guppy receives for eating a corpse. Since corpses
+    "decay" this is the MAX value of a "fresh" corpse.
+
+9)  DISH SIZE (expects a positive floating point value):
+    Size of the world.
+
+10) ZAPPER RANDOM FORCE (expects a positive floating point value):
+    Random movement force applied to Zappers each frame.
+
+11) ZAPPER RANDOM TORQUE (expects a positive floating point value):
+    Random rotation force applied to Zappers each frame.
+
+12) ZAPPER QUANTITY (expects a positive integer):
+    Number of Zappers (does not change).
+
+13) PELLET QUANTITY (expects a positive integer):
+    Max number of food pellets that can exist on any given time.
+
+14) PELLET CREATION DELAY (expects a positive integer):
+    Time it takes (in frames) for a new Pellet to be spawned in the world.
+
+15) START SCARCE:
+    Begin simulation with no Pellets in the world.
+
+16) CORPSE DECAY:
+    Corpses have a limited lifetime after they are created, after which they
+    disappear.
+
+17) CORPSE DECAY RATE (expects a positive integer):
+    Time it takes (in frames) for a corpse to decay.
+
+18) COLORS:
+    Colors of the entities in the world. Remember that Guppies "see" in three
+    colors (RED, GREEN and BLUE). Entities with similar colors would be
+    difficult to distinguish for a Guppy.
+
+19) ACTIVATION DELAY (expects a positive integer):
+    Time it takes for a Guppy to pass from being an "Egg" to being an adult.
+    It's important to leave this value a bit high (above 100) so to prevent a
+    Guppy from being born too near to another entity.
+
+20) THRUST FORCE (expects a positive floating point value):
+    Strength of Guppy thrust force. The higher the force, the higher the speed.
+
+21) THRUST RADIUS (expects a positive floating point value):
+    The higher this value, the faster the Guppies can "turn". Too high they
+    might not be able to control themselves. Default value provides a good
+    balance.
+
+22) INITIAL ENERGY (expects a positive floating point value):
+    Initial energy Guppies begin their life with. Each "energy point"
+    represents at most one second (60 frames) of life.
+
+23) MAX ENERGY (expects a positive floating point value):
+    Maximum energy points a Guppy can have at any given time.
+
+24) AGING RATE (expects a positive integer):
+    Rate at which Guppies "age". Aging for a Guppy means that it consumes
+    energy points faster (thus, it gets harder to stay alive the longer a Guppy
+    lives). This value being "x", each Guppy consumes 1 additional energy point
+    per second every "x" seconds it has lived. In other words, the smaller this
+    value is, the faster Guppies age.
+
+25) LEAVE CORPSE:
+    Guppy leaves a corpse behind when it dies.
+
+26) ENERGY TRANSFERS (expects floating point values):
+    Quantity of energy points transfered from entity to Guppy during collision.
+    Zappers should have a negative value so that they "steal" energy from the
+    Guppies whenever they touch. Other entities transfer their energy whenever
+    a Guppy attacks them head on (i.e. when they hit them with their frontal
+    "beak"). This should be made positive, so that they give the Guppy
+    additional lifetime.
+
+================================================================================
+
+================================================================================
+IV. CONTROLS:
+
+Once you hit the "Begin new simulation" button the parameter window will close
+and the simulation window will pop up.
+
+You can resize, minimize or maximize this window at any time, but if you close
+it the simulation will be lost! Next is a list of controls so you can navigate
+around the Dish and take a close look at th Guppies:
+
+I) Zoom in.
+O) Zoom out.
+Z) Zoom out completely.
+
+W) Shift camera up.
+A) Shift camera left.
+S) Shift camera down.
+D) Shift camera right.
+
+F11) Switch to Fullscreen.
+
+SPACE) Pause simulation.
+
+V) Turn on/off vSync (when turned off, rendering will be done at max speed).
+G) Turn on/off graphics (simulation goes faster when graphics are turned off).
+T) Turn on/off text display.
+
+MOUSE WHEEL UP/DOWN) Zoom in/out on cursor position.
+
+MOUSE CLICK) Shift camera to cursor position. If you click on an entity, that
+             will cause the camera to "follow" it around.
+
+* To accelerate the simulation to the max you should disable vSync, Graphics
+  and text rendering all at once. That way evolution can happen faster while
+  you're not directly looking at it.
+
+================================================================================
